@@ -11,7 +11,7 @@ function App() {
   const [unicornSize, setUnicornSize] = useState(10);
   const [lionSize, setLionSize] = useState(10);
   const [isOpen, setIsOpen] = useState(true);
-  const [animals, setAnimals] = useState(['rhino', 'hippo']);
+  const [animals, setAnimals] = useState(['rhino', 'hippo', 'lizard']);
 
   function handleUnicornEat() {
     setUnicornSize(unicornSize + 1);
@@ -61,10 +61,21 @@ function App() {
       <div className="zoosign">
         <br/>
         <OpenSign sign={isOpen}/>
-        <button onClick={handleIsOpen}>Open/Close the Zoo</button>
+        <div className="buttons">
+          <button onClick={handleIsOpen}>Open/Close the Zoo</button>
+        </div>
+        
       </div>
       <div className="parade">
         <Parade animals={animals}/>
+        <div className="buttons">
+          <button onClick={()=>handleAnimals('lion')}>Add Lion</button>
+          <button onClick={()=>handleAnimals('rhino')}>Add Rhino</button>
+          <button onClick={()=>handleAnimals('hippo')}>Add Hippo</button>
+          <button onClick={()=>handleAnimals('lizard')}>Add Lizard</button>
+
+        </div>
+        
 
       </div>
       

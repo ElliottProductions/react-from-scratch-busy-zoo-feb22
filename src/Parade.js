@@ -3,8 +3,8 @@ import AnimalEmoji from './AnimalEmoji';
 
 export default function Parade({ animals }) {
   return (
-    <div>
-      {animals.map(animal => <AnimalEmoji key={animal.index}/>)}
+    <div className="emojiarea">
+      {animals.map(animal => <AnimalEmoji key={animal.index} animal={animal}/>)}
     </div>
   );
 }

@@ -68,5 +68,15 @@
 
 .parade {
   background-color: rgb(33, 46, 46);
+  height: 130px;
 }
 
+.emojiarea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.emojiarea > span {
+  font-size: 50px;
+}
