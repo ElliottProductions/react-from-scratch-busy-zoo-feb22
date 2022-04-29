@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.emoji {
+  padding: 50px;
+  transition: all .2s ease-in-out;
+}
+
+.fight {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(94, 89, 86);
+}
+
+.fighter {
+  margin: 50px;
+}
+
+.buttons button {
+  margin: 10px;
+  color:rgb(255, 255, 255);
+  font-size: 15px;
+  background-color: black;
+}
+
+.zoosign {
+  background-color: rgb(95, 0, 143);
+  color:#ffffff;
+  height: 130px;
+}
+
+.parade {
+  background-color: rgb(33, 46, 46);
+}
+
