@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState } from 'react';
 import OpenSign from './OpenSign';
 import Parade from './Parade';
+import CustomButton from './CustomButton';
 
 
 
@@ -46,15 +47,15 @@ function App() {
         <div className="fighter">
           <p className="emoji" style={{ fontSize: `${unicornSize * 5}px` }}>🦄</p>
           <div className="buttons">
-            <button onClick={handleUnicornEat}>(Do) Feed the Unicorn</button>
-            <button onClick={handleUnicornFight}>Unicorn, I Choose You!</button>
+            <CustomButton onClick={handleUnicornEat}>Feed the Unicorn</CustomButton>
+            <CustomButton onClick={handleUnicornFight}>Unicorn, I Choose You!</CustomButton>
           </div>
         </div>
         <div className="fighter">
           <p className="emoji" style={{ fontSize: `${lionSize * 5}px` }}>🐈</p>
           <div className="buttons">
-            <button onClick={handleLionEat}>(Do) Feed the Lion</button>
-            <button onClick={handleLionFight}>Lion, I Choose You!</button>
+            <CustomButton onClick={handleLionEat}>Feed the Lion</CustomButton>
+            <CustomButton onClick={handleLionFight}>Lion, I Choose You!</CustomButton>
           </div>
         </div>
       </div>
@@ -62,17 +63,17 @@ function App() {
         <br/>
         <OpenSign sign={isOpen}/>
         <div className="buttons">
-          <button onClick={handleIsOpen}>Open/Close the Zoo</button>
+          <CustomButton onClick={handleIsOpen}>Open/Close the Zoo</CustomButton>
         </div>
         
       </div>
       <div className="parade">
         <Parade animals={animals}/>
         <div className="buttons">
-          <button onClick={()=>handleAnimals('lion')}>Add Lion</button>
-          <button onClick={()=>handleAnimals('rhino')}>Add Rhino</button>
-          <button onClick={()=>handleAnimals('hippo')}>Add Hippo</button>
-          <button onClick={()=>handleAnimals('lizard')}>Add Lizard</button>
+          <CustomButton onClick={()=>handleAnimals('lion')}>Add Lion</CustomButton>
+          <CustomButton onClick={()=>handleAnimals('rhino')}>Add Rhino</CustomButton>
+          <CustomButton onClick={()=>handleAnimals('hippo')}>Add Hippo</CustomButton>
+          <CustomButton onClick={()=>handleAnimals('lizard')}>Add Lizard</CustomButton>
 
         </div>
         
