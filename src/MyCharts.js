@@ -4,33 +4,37 @@ import { VictoryBar, VictoryChart, VictoryPie, VictoryTheme } from 'victory';
 export default function MyCharts() {
   return (
     <div className="chart-padding">
+      <h4>Wealth in Trillions of USD</h4>
       <VictoryChart
         domainPadding={40}
       >
-          
+        
         <VictoryBar
           width={1000}
           
           data={[
-            { quarter: 'Middle Class', earnings: 35000000000000, colorScale: 'blue' },
-            { quarter: 'Millionaire Wealth', earnings: 141700000000000 },
-            { quarter: 'Billionaire Wealth', earnings: 4180000000000 }
+            { demo: 'Lower', wealth: 3 },
+            { demo: 'Middle', wealth: 35, colorScale: 'blue' },
+            { demo: 'Millionaires', wealth: 141.7 },
+            { demo: 'Billionaires', wealth: 4.18 }
           ]}
-          x="quarter"
-          y="earnings"
+          
+          x="demo"
+          y="wealth"
         />
       </VictoryChart>
-  
+      <h4>Percentage of US population </h4>
+      <p>Billionaires not pictured due to the fact they would be invisible on this chart</p>
       <VictoryPie
         width={1000}
         colorScale={['tomato', 'rebeccapurple', 'gold', 'cyan']}
         data={[
-          { quarter: 'Lower Class', earnings: 144000000 },
-          { quarter: 'Middle Class', earnings: 165000000 },
-          { quarter: 'Millionaires', earnings: 20270000 }
+          { class: 'Lower Class', population: 144000000 },
+          { class: 'Middle Class', population: 165000000 },
+          { class: 'Millionaires', population: 20270000 }
         ]}
-        x="quarter"
-        y="earnings"
+        x="class"
+        y="population"
       />
 
     </div>
