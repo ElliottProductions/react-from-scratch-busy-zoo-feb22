@@ -14,7 +14,7 @@ export default function MyCharts() {
           
           data={[
             { demo: 'Lower', wealth: 3 },
-            { demo: 'Middle', wealth: 35, colorScale: 'blue' },
+            { demo: 'Middle', wealth: 35 },
             { demo: 'Millionaires', wealth: 141.7 },
             { demo: 'Billionaires', wealth: 4.18 }
           ]}
@@ -24,10 +24,10 @@ export default function MyCharts() {
         />
       </VictoryChart>
       <h4>Percentage of US population </h4>
-      <p>Billionaires not pictured due to the fact they would be invisible on this chart</p>
+      <p>(Billionaires not pictured due to the fact that they would be invisible on this chart)</p>
       <VictoryPie
         width={1000}
-        colorScale={['tomato', 'rebeccapurple', 'gold', 'cyan']}
+        colorScale={['orange', 'purple', 'cyan']}
         data={[
           { class: 'Lower Class', population: 144000000 },
           { class: 'Middle Class', population: 165000000 },
